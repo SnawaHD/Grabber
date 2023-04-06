@@ -1,0 +1,15 @@
+C:\Users\Lydia\source\repos\Ggezl2p\Ggezl2p\bin\Debug\net6.0\Ggezl2p.exe
+C:\Users\Lydia\source\repos\Ggezl2p\Ggezl2p\bin\Debug\net6.0\Ggezl2p.deps.json
+C:\Users\Lydia\source\repos\Ggezl2p\Ggezl2p\bin\Debug\net6.0\Ggezl2p.runtimeconfig.json
+C:\Users\Lydia\source\repos\Ggezl2p\Ggezl2p\bin\Debug\net6.0\Ggezl2p.dll
+C:\Users\Lydia\source\repos\Ggezl2p\Ggezl2p\bin\Debug\net6.0\Ggezl2p.pdb
+C:\Users\Lydia\source\repos\Ggezl2p\Ggezl2p\obj\Debug\net6.0\Ggezl2p.csproj.AssemblyReference.cache
+C:\Users\Lydia\source\repos\Ggezl2p\Ggezl2p\obj\Debug\net6.0\Ggezl2p.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lydia\source\repos\Ggezl2p\Ggezl2p\obj\Debug\net6.0\Ggezl2p.AssemblyInfoInputs.cache
+C:\Users\Lydia\source\repos\Ggezl2p\Ggezl2p\obj\Debug\net6.0\Ggezl2p.AssemblyInfo.cs
+C:\Users\Lydia\source\repos\Ggezl2p\Ggezl2p\obj\Debug\net6.0\Ggezl2p.csproj.CoreCompileInputs.cache
+C:\Users\Lydia\source\repos\Ggezl2p\Ggezl2p\obj\Debug\net6.0\Ggezl2p.dll
+C:\Users\Lydia\source\repos\Ggezl2p\Ggezl2p\obj\Debug\net6.0\refint\Ggezl2p.dll
+C:\Users\Lydia\source\repos\Ggezl2p\Ggezl2p\obj\Debug\net6.0\Ggezl2p.pdb
+C:\Users\Lydia\source\repos\Ggezl2p\Ggezl2p\obj\Debug\net6.0\Ggezl2p.genruntimeconfig.cache
+C:\Users\Lydia\source\repos\Ggezl2p\Ggezl2p\obj\Debug\net6.0\ref\Ggezl2p.dll
